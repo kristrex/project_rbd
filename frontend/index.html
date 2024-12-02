@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzeria App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="auth-forms">
+        <div class="form-container">
+            <h2>Register</h2>
+            <form id="register">
+                <input type="text" id="register-username" placeholder="Username" required>
+                <input type="password" id="register-password" placeholder="Password" required>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+
+        <div class="form-container">
+            <h2>Login</h2>
+            <form id="login">
+                <input type="text" id="login-username" placeholder="Username" required>
+                <input type="password" id="login-password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="content">
+        <button id="logout-button">Logout</button>
+
+        <details>
+            <summary>Информация</summary>
+            <div class="scrollable-container">
+                <div class="list-container">
+                    <h2>Persons</h2>
+                    <ul id="persons-list"></ul>
+                </div>
+
+                <div class="list-container">
+                    <h2>Pizzerias</h2>
+                    <ul id="pizzerias-list"></ul>
+                </div>
+
+                <div class="list-container">
+                    <h2>Visits</h2>
+                    <ul id="visits-list"></ul>
+                </div>
+
+                <div class="list-container">
+                    <h2>Orders</h2>
+                    <ul id="orders-list"></ul>
+                </div>
+
+                <div class="list-container">
+                    <h2>Menus</h2>
+                    <ul id="menus-list"></ul>
+                </div>
+            </div>
+        </details>
+
+        <details>
+            <summary>Управление пользователями</summary>
+            <div class="request-container">
+                <h2>Создать пользователя</h2>
+                <form id="create-person-form">
+                    <input type="text" id="create-person-name" placeholder="Name" required>
+                    <input type="number" id="create-person-age" placeholder="Age" required>
+                    <input type="text" id="create-person-gender" placeholder="Gender" required>
+                    <input type="text" id="create-person-address" placeholder="Address" required>
+                    <button type="submit">Создать</button>
+                </form>
+
+                <h2>Обновить пользователя</h2>
+                <form id="update-person-form">
+                    <input type="number" id="update-person-id" placeholder="ID" required>
+                    <input type="text" id="update-person-name" placeholder="Name" required>
+                    <input type="number" id="update-person-age" placeholder="Age" required>
+                    <input type="text" id="update-person-gender" placeholder="Gender" required>
+                    <input type="text" id="update-person-address" placeholder="Address" required>
+                    <button type="submit">Обновить</button>
+                </form>
+
+                <h2>Удалить пользователя</h2>
+                <form id="delete-person-form">
+                    <input type="number" id="delete-person-id" placeholder="ID" required>
+                    <button type="submit">Удалить</button>
+                </form>
+            </div>
+        </details>
+        <details>
+            <summary>Поиск пользователей</summary>
+            <div class="request-container">
+                <h2>Поиск пользователей по городу и минимальному возрасту</h2>
+                <form id="search-persons-form">
+                    <input type="text" id="search-city" placeholder="City" required>
+                    <input type="number" id="search-min-age" placeholder="Min Age" required>
+                    <button type="submit">Поиск</button>
+                </form>
+                <ul id="search-results"></ul>
+            </div>
+        </details>
+        <details>
+            <summary>Функции и процедуры</summary>
+            <div class="request-container">
+                <h2>Получить средний возраст по городу</h2>
+                <form id="average-age-form">
+                    <input type="text" id="average-age-city" placeholder="City" required>
+                    <button type="submit">Получить</button>
+                </form>
+                <div id="average-age-result"></div>
+
+                <h2>Удалить посещения пользователей старше определенного возраста</h2>
+                <form id="delete-older-than-form">
+                    <input type="number" id="delete-older-than-age" placeholder="Max Age" required>
+                    <button type="submit">Удалить</button>
+                </form>
+            </div>
+        </details>
+
+        <details>
+            <summary>Триггеры</summary>
+            <div class="request-container">
+                <h2>Обновить пользователя (с триггером)</h2>
+                <form id="update-person-with-trigger-form">
+                    <input type="number" id="update-person-with-trigger-id" placeholder="ID" required>
+                    <input type="text" id="update-person-with-trigger-name" placeholder="Name" required>
+                    <input type="number" id="update-person-with-trigger-age" placeholder="Age" required>
+                    <input type="text" id="update-person-with-trigger-gender" placeholder="Gender" required>
+                    <input type="text" id="update-person-with-trigger-address" placeholder="Address" required>
+                    <button type="submit">Обновить</button>
+                </form>
+            </div>
+        </details>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
